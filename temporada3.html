@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temporada 3 - Jujutsu Kaisen</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(45deg, #0a2338, #0f5f7a, #16c79a, #4d96ff, #f4e04d);
+            background-size: 400% 400%;
+            animation: redemptionGradientMove 10s ease infinite;
+            color: white;
+            min-height: 100vh;
+            padding: 2rem;
+        }
+
+        @keyframes redemptionGradientMove {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 3rem;
+        }
+
+        h1 {
+            font-size: 3rem;
+            background: linear-gradient(135deg, #00d4ff, #8b00ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .back-btn {
+            padding: 0.8rem 2rem;
+            background: #00d4ff;
+            color: #000;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: 700;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s ease;
+        }
+
+        .back-btn:hover {
+            background: #8b00ff;
+            color: white;
+            transform: scale(1.05);
+        }
+
+        .season-nav {
+            display: flex;
+            justify-content: flex-start;
+            margin-bottom: 1.5rem;
+        }
+
+        .season-btn {
+            padding: 0.8rem 1.5rem;
+            background: #16c79a;
+            color: #052033;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: 700;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s ease;
+        }
+
+        .season-btn:hover {
+            background: #f4e04d;
+            color: #222;
+            transform: scale(1.05);
+        }
+
+        .content {
+            background: rgba(0, 0, 0, 0.3);
+            padding: 3rem;
+            border-radius: 15px;
+            border-left: 5px solid #00d4ff;
+        }
+
+        p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+        }
+
+        h2 {
+            color: #ff1493;
+            margin: 2rem 0 1rem 0;
+            font-size: 1.8rem;
+        }
+
+        ul {
+            margin-left: 2rem;
+            margin-bottom: 1.5rem;
+        }
+
+        li {
+            margin-bottom: 0.8rem;
+        }
+
+        .episodes-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .episode-card {
+            background: rgba(0, 212, 255, 0.1);
+            border: 2px solid #00d4ff;
+            border-radius: 10px;
+            padding: 1.5rem;
+            transition: all 0.3s ease;
+        }
+
+        .episode-card:hover {
+            background: rgba(0, 212, 255, 0.3);
+            transform: translateY(-5px);
+            box-shadow: 0 0 20px rgba(0, 212, 255, 0.5);
+        }
+
+        .episode-number {
+            color: #ff1493;
+            font-weight: 700;
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .episode-title {
+            color: #00d4ff;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            word-break: break-word;
+        }
+
+        .episode-link {
+            display: inline-block;
+            padding: 0.8rem 1.5rem;
+            background: #00d4ff;
+            color: #000;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+            font-weight: 700;
+            width: 100%;
+            text-align: center;
+        }
+
+        .episode-link:hover {
+            background: #8b00ff;
+            color: white;
+        }
+
+        @media (max-width: 768px) {
+            .episodes-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .season-nav {
+                justify-content: center;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Temporada 3</h1>
+            <a href="index.html" class="back-btn">← Voltar</a>
+        </header>
+
+        <div class="season-nav">
+            <a href="temporada2.html" class="season-btn">← Voltar para Temporada 2</a>
+        </div>
+
+        <div class="content">
+            <h2>Visão Geral</h2>
+            <p>A Temporada 3 marca um ponto crucial na série, também conhecida como Jujutsu Kaisen: Shibuya Incident Arc. Este arco traz consequências devastadoras para os personagens e o mundo de Jujutsu Kaisen, sendo um dos mais intensos da série.</p>
+
+            <h2>Trama Principal</h2>
+            <p>O incidente de Shibuya força todos os aliados a entrar em conflito direto com as maldições mais poderosas. Os eventos deste arco mudarão permanentemente o destino de todos os personagens envolvidos e redefinirão o equilíbrio de poder no mundo das maldições.</p>
+
+            <h2>Arco Principal</h2>
+            <ul>
+                <li><strong>Shibuya Incident:</strong> Um confronto em larga escala que une heróis e vilões em uma batalha épica</li>
+                <li><strong>Desenvolvimento de Yuji:</strong> Mudanças significativas na jornada do protagonista</li>
+                <li><strong>Revelações:</strong> Mistérios importantes sobre Sukuna e as maldições</li>
+            </ul>
+
+            <h2>Destaques</h2>
+            <ul>
+                <li>Combates intensos e sem precedentes</li>
+                <li>Morte de personagens significativos (spoiler!)</li>
+                <li>Transformações de poder dramáticas</li>
+                <li>Consequências duradouras para toda a série</li>
+            </ul>
+
+            <h2>Episódios</h2>
+            <div class="episodes-grid">
+                <div class="episode-card">
+                    <div class="episode-number">Episódio 1</div>
+                    <div class="episode-title">Incidente em Shibuya: Primeira Frente</div>
+                    <a href="https://animesonlinecc.to/episodio/jujutsu-kaisen-shimetsu-kaiyuu-zenpen-episodio-1/" target="_blank" class="episode-link">▶ Assistir</a>
+                </div>
+                <div class="episode-card">
+                    <div class="episode-number">Episódio 2</div>
+                    <div class="episode-title">Incidente em Shibuya: Pânico</div>
+                    <a href="https://animesonlinecc.to/episodio/jujutsu-kaisen-shimetsu-kaiyuu-zenpen-episodio-2/" target="_blank" class="episode-link">▶ Assistir</a>
+                </div>
+                <div class="episode-card">
+                    <div class="episode-number">Episódio 3</div>
+                    <div class="episode-title">Incidente em Shibuya: Execução</div>
+                    <a href="https://animesonlinecc.to/episodio/jujutsu-kaisen-shimetsu-kaiyuu-zenpen-episodio-3/" target="_blank" class="episode-link">▶ Assistir</a>
+                </div>
+                <div class="episode-card">
+                    <div class="episode-number">Episódio 4</div>
+                    <div class="episode-title">Atualização de Sukuna</div>
+                    <a href="https://animesonlinecc.to/episodio/jujutsu-kaisen-shimetsu-kaiyuu-zenpen-episodio-4/" target="_blank" class="episode-link">▶ Assistir</a>
+                </div>
+                <div class="episode-card">
+                    <div class="episode-number">Episódio 5</div>
+                    <div class="episode-title">Irmã Maldição</div>
+                    <a href="https://animesonlinecc.to/episodio/jujutsu-kaisen-shimetsu-kaiyuu-zenpen-episodio-5/" target="_blank" class="episode-link">▶ Assistir</a>
+                </div>
+                <div class="episode-card">
+                    <div class="episode-number">Episódio 6</div>
+                    <div class="episode-title">Encontro de Senkei</div>
+                    <a href="https://animesonlinecc.to/episodio/jujutsu-kaisen-shimetsu-kaiyuu-zenpen-episodio-6/" target="_blank" class="episode-link">▶ Assistir</a>
+                </div>
+                <div class="episode-card">
+                    <div class="episode-number">Episódio 7</div>
+                    <div class="episode-title">Sacrifício</div>
+                    <a href="https://animesonlinecc.to/episodio/jujutsu-kaisen-shimetsu-kaiyuu-zenpen-episodio-7/" target="_blank" class="episode-link">▶ Assistir</a>
+                </div>
+                <div class="episode-card">
+                    <div class="episode-number">Episódio 8</div>
+                    <div class="episode-title">Refrão Perfeito</div>
+                    <a href="https://animesonlinecc.to/episodio/jujutsu-kaisen-shimetsu-kaiyuu-zenpen-episodio-8/" target="_blank" class="episode-link">▶ Assistir</a>
+                </div>
+                <div class="episode-card">
+                    <div class="episode-number">Episódio 9</div>
+                    <div class="episode-title">Verdade da Escuridão</div>
+                    <a href="https://animesonlinecc.to/episodio/jujutsu-kaisen-shimetsu-kaiyuu-zenpen-episodio-9/" target="_blank" class="episode-link">▶ Assistir</a>
+                </div>
+                <div class="episode-card">
+                    <div class="episode-number">Episódio 10</div>
+                    <div class="episode-title">Revolução</div>
+                    <a href="https://animesonlinecc.to/episodio/jujutsu-kaisen-shimetsu-kaiyuu-zenpen-episodio-10/" target="_blank" class="episode-link">▶ Assistir</a>
+                </div>
+                <div class="episode-card">
+                    <div class="episode-number">Episódio 11</div>
+                    <div class="episode-title">Pura Extensão</div>
+                    <a href="https://animesonlinecc.to/episodio/jujutsu-kaisen-shimetsu-kaiyuu-zenpen-episodio-11/" target="_blank" class="episode-link">▶ Assistir</a>
+                </div>
+                <div class="episode-card">
+                    <div class="episode-number">Episódio 12</div>
+                    <div class="episode-title">Destino Final</div>
+                    <a href="https://animesonlinecc.to/episodio/jujutsu-kaisen-shimetsu-kaiyuu-zenpen-episodio-12/" target="_blank" class="episode-link">▶ Assistir</a>
+                </div>
+            </div>
+
+            <p style="margin-top: 3rem; text-align: center; color: #ff1493;">Total de 12 episódios</p>
+        </div>
+    </div>
+</body>
+</html>

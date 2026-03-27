@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jujutsu Kaisen - Streaming</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #0a0015, #1a0033, #2d0052, #3d001a);
+            background-size: 400% 400%;
+            animation: gradientMove 8s ease infinite;
+            color: white;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            position: relative;
+        }
+
+        @keyframes gradientMove {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        /* Blood splatter effect overlay */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: 
+                radial-gradient(ellipse 800px 600px at 20% 30%, rgba(139, 0, 0, 0.1) 0%, transparent 50%),
+                radial-gradient(ellipse 600px 400px at 80% 70%, rgba(200, 16, 46, 0.08) 0%, transparent 50%);
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        .container {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            max-width: 1000px;
+            padding: 2rem;
+        }
+
+        h1 {
+            font-size: 5rem;
+            font-weight: 900;
+            margin: 0 0 2rem 0;
+            background: linear-gradient(135deg, #ff1493, #8b00ff, #ff1493);
+            background-size: 300% 300%;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-shadow: 0 0 40px rgba(139, 0, 255, 0.5);
+            animation: titlePulse 3s ease-in-out infinite;
+            letter-spacing: 3px;
+        }
+
+        @keyframes titlePulse {
+            0%, 100% {
+                filter: drop-shadow(0 0 10px rgba(139, 0, 255, 0.5));
+                transform: scale(1);
+            }
+            50% {
+                filter: drop-shadow(0 0 30px rgba(255, 20, 147, 0.8));
+                transform: scale(1.02);
+            }
+        }
+
+        .subtitle {
+            font-size: 1.5rem;
+            color: #ff1493;
+            margin-bottom: 4rem;
+            font-weight: 300;
+            letter-spacing: 2px;
+            opacity: 0.9;
+        }
+
+        .nav-buttons {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin-top: 3rem;
+        }
+
+        .nav-btn {
+            padding: 1rem 2rem;
+            font-size: 1.2rem;
+            font-weight: 700;
+            border: 3px solid;
+            border-radius: 10px;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            position: relative;
+            overflow: hidden;
+            background: transparent;
+            color: white;
+            isolation: isolate;
+        }
+
+        .nav-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: inherit;
+            transition: left 0.4s ease;
+            z-index: -1;
+        }
+
+        .nav-btn::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: repeating-linear-gradient(
+                90deg,
+                rgba(255, 255, 255, 0.0) 0,
+                rgba(255, 255, 255, 0.0) 8px,
+                rgba(255, 255, 255, 0.12) 8px,
+                rgba(255, 255, 255, 0.12) 10px
+            );
+            mix-blend-mode: screen;
+            opacity: 0;
+            transform: translateX(-12px);
+            pointer-events: none;
+        }
+
+        .nav-btn:hover::before {
+            left: 0;
+        }
+
+        .nav-btn:hover::after {
+            opacity: 1;
+            animation: buttonGlitch 260ms steps(2, end) 2;
+        }
+
+        .nav-btn span {
+            position: relative;
+            display: inline-block;
+        }
+
+        .nav-btn:hover span {
+            animation: textGlitch 260ms steps(2, end) 2;
+        }
+
+        @keyframes buttonGlitch {
+            0% {
+                clip-path: inset(0 0 82% 0);
+                transform: translate(-3px, -1px);
+            }
+            25% {
+                clip-path: inset(38% 0 34% 0);
+                transform: translate(3px, 1px);
+            }
+            50% {
+                clip-path: inset(67% 0 9% 0);
+                transform: translate(-2px, 0);
+            }
+            75% {
+                clip-path: inset(18% 0 59% 0);
+                transform: translate(2px, -1px);
+            }
+            100% {
+                clip-path: inset(0 0 0 0);
+                transform: translate(0, 0);
+            }
+        }
+
+        @keyframes textGlitch {
+            0% {
+                transform: translate(0, 0);
+                text-shadow: none;
+            }
+            33% {
+                transform: translate(-2px, 0);
+                text-shadow: 2px 0 #ff003c;
+            }
+            66% {
+                transform: translate(2px, 0);
+                text-shadow: -2px 0 #00e1ff;
+            }
+            100% {
+                transform: translate(0, 0);
+                text-shadow: none;
+            }
+        }
+
+        /* Temporada 1 Button */
+        .btn-t1 {
+            border-color: #8b00ff;
+            color: #8b00ff;
+        }
+
+        .btn-t1::before {
+            background: #8b00ff;
+        }
+
+        .btn-t1:hover {
+            color: white;
+            box-shadow: 0 0 30px rgba(139, 0, 255, 0.8);
+            transform: translateY(-3px);
+        }
+
+        /* Temporada 2 Button */
+        .btn-t2 {
+            border-color: #ff1493;
+            color: #ff1493;
+        }
+
+        .btn-t2::before {
+            background: #ff1493;
+        }
+
+        .btn-t2:hover {
+            color: white;
+            box-shadow: 0 0 30px rgba(255, 20, 147, 0.8);
+            transform: translateY(-3px);
+        }
+
+        /* Temporada 3 Button */
+        .btn-t3 {
+            border-color: #00d4ff;
+            color: #00d4ff;
+        }
+
+        .btn-t3::before {
+            background: #00d4ff;
+        }
+
+        .btn-t3:hover {
+            color: #000;
+            box-shadow: 0 0 30px rgba(0, 212, 255, 0.8);
+            transform: translateY(-3px);
+        }
+
+        /* Filme Button */
+        .btn-filme {
+            border-color: #ffd700;
+            color: #ffd700;
+        }
+
+        .btn-filme::before {
+            background: #ffd700;
+        }
+
+        .btn-filme:hover {
+            color: #000;
+            box-shadow: 0 0 30px rgba(255, 215, 0, 0.8);
+            transform: translateY(-3px);
+        }
+
+        .description {
+            margin: 3rem 0;
+            padding: 2rem;
+            background: rgba(0, 0, 0, 0.4);
+            border: 2px solid rgba(255, 20, 147, 0.3);
+            border-radius: 10px;
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #ccc;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 3rem;
+            }
+
+            .subtitle {
+                font-size: 1.2rem;
+                margin-bottom: 2rem;
+            }
+
+            .nav-buttons {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+
+            .nav-btn {
+                padding: 0.8rem 1.5rem;
+                font-size: 1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 1rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+                margin-bottom: 1rem;
+            }
+
+            .subtitle {
+                font-size: 1rem;
+                margin-bottom: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>JUJUTSU KAISEN</h1>
+        <p class="subtitle">Enfrente a Escuridão da Maldição</p>
+
+        <div class="description">
+            <p>Bem-vindo ao portal de streaming de Jujutsu Kaisen. Assista a todos os episódios das temporadas e filmes em alta qualidade. Uma história épica de poder, sacrifício e redenção.</p>
+        </div>
+
+        <div class="nav-buttons">
+            <a href="temporada1.html" class="nav-btn btn-t1"><span>Temporada 1</span></a>
+            <a href="temporada2.html" class="nav-btn btn-t2"><span>Temporada 2</span></a>
+            <a href="temporada3.html" class="nav-btn btn-t3"><span>Temporada 3</span></a>
+            <a href="filme.html" class="nav-btn btn-filme"><span>Filme</span></a>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temporada 2 - Jujutsu Kaisen</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(45deg, #12090a, #2a0d11, #4b1117, #1b1b1b, #6b0f1a);
+            background-size: 400% 400%;
+            animation: sorrowGradientMove 10s ease infinite;
+            color: white;
+            min-height: 100vh;
+            padding: 2rem;
+        }
+
+        @keyframes sorrowGradientMove {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 3rem;
+        }
+
+        h1 {
+            font-size: 3rem;
+            background: linear-gradient(135deg, #ff1493, #00d4ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .back-btn {
+            padding: 0.8rem 2rem;
+            background: #ff1493;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: 700;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s ease;
+        }
+
+        .back-btn:hover {
+            background: #00d4ff;
+            transform: scale(1.05);
+        }
+
+        .season-nav {
+            display: flex;
+            justify-content: space-between;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .season-btn {
+            padding: 0.8rem 1.5rem;
+            background: #6b0f1a;
+            color: #f1d7db;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: 700;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s ease;
+        }
+
+        .season-btn:hover {
+            background: #941b2d;
+            transform: scale(1.05);
+        }
+
+        .content {
+            background: rgba(0, 0, 0, 0.3);
+            padding: 3rem;
+            border-radius: 15px;
+            border-left: 5px solid #ff1493;
+        }
+
+        p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+        }
+
+        h2 {
+            color: #00d4ff;
+            margin: 2rem 0 1rem 0;
+            font-size: 1.8rem;
+        }
+
+        ul {
+            margin-left: 2rem;
+            margin-bottom: 1.5rem;
+        }
+
+        li {
+            margin-bottom: 0.8rem;
+        }
+
+        .episodes-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .episode-card {
+            background: rgba(255, 20, 147, 0.1);
+            border: 2px solid #ff1493;
+            border-radius: 10px;
+            padding: 1.5rem;
+            transition: all 0.3s ease;
+        }
+
+        .episode-card:hover {
+            background: rgba(255, 20, 147, 0.3);
+            transform: translateY(-5px);
+            box-shadow: 0 0 20px rgba(255, 20, 147, 0.5);
+        }
+
+        .episode-number {
+            color: #00d4ff;
+            font-weight: 700;
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .episode-title {
+            color: #ff1493;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            word-break: break-word;
+        }
+
+        .episode-link {
+            display: inline-block;
+            padding: 0.8rem 1.5rem;
+            background: #ff1493;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+            font-weight: 700;
+            width: 100%;
+            text-align: center;
+        }
+
+        .episode-link:hover {
+            background: #00d4ff;
+        }
+
+        @media (max-width: 768px) {
+            .episodes-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .season-nav {
+                justify-content: center;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Temporada 2</h1>
+            <a href="index.html" class="back-btn">← Voltar</a>
+        </header>
+
+        <div class="season-nav">
+            <a href="temporada1.html" class="season-btn">← Voltar para Temporada 1</a>
+            <a href="temporada3.html" class="season-btn">Avançar para Temporada 3 →</a>
+        </div>
+
+        <div class="content">
+            <h2>Visão Geral</h2>
+            <p>A Temporada 2 de Jujutsu Kaisen continua a expansão do universo de exorcismo de maldições, aprofundando a trama e apresentando novos antagonistas perigosos. Esta temporada marca um ponto de virada significativo na série.</p>
+
+            <h2>Trama Principal</h2>
+            <p>Após os eventos da Temporada 1, Yuji e seus companheiros enfrentam novas ameaças de maldições ainda mais poderosas. O retorno de Sukuna se torna cada vez mais relevante, enquanto Yuji luta para manter o controle. Novos aliados e inimigos surgem, mudando o equilíbrio de poder no mundo das maldições.</p>
+
+            <h2>Novos Personagens</h2>
+            <ul>
+                <li><strong>Junpei Yoshino:</strong> Novo aliado com passado complexo</li>
+                <li><strong>Mahito:</strong> Antagonista principal da temporada</li>
+                <li><strong>Hanami:</strong> Maldição de catástrofe natural</li>
+                <li><strong>Jogo:</strong> Maldição com poderes de fogo</li>
+            </ul>
+
+            <h2>Elementos Principais</h2>
+            <ul>
+                <li>Introdução das Maldições Especiais</li>
+                <li>Desenvolvimento dos relacionamentos entre personagens</li>
+                <li>Revelações sobre poderes e técnicas</li>
+            </ul>
+
+            <h2>Episódios</h2>
+            <div class="episodes-grid">
+                <div class="episode-card">
+                    <div class="episode-number">Episódio 1</div>
+                    <div class="episode-title">Volume Especial</div>
+                    <a href="https://animesonlinecc.to/episodio/jujutsu-kaisen-2-episodio-1/" target="_blank" class="episode-link">▶ Assistir</a>
+                </div>
+                <div class="episode-card">
+                    <div class="episode-number">Episódio 2</div>
+                    <div class="episode-title">Inauspicioso</div>
+                    <a href="https://animesonlinecc.to/episodio/jujutsu-kaisen-2-episodio-2/" target="_blank" class="episode-link">▶ Assistir</a>
+                </div>
+                <div class="episode-card">
+                    <div class="episode-number">Episódio 3</div>
+                    <div class="episode-title">Alvo</div>
+                    <a href="https://animesonlinecc.to/episodio/jujutsu-kaisen-2-episodio-3/" target="_blank" class="episode-link">▶ Assistir</a>
+                </div>
+                <div class="episode-card">
+                    <div class="episode-number">Episódio 4</div>
+                    <div class="episode-title">Coluna Vertebral de Yuji</div>
+                    <a href="https://animesonlinecc.to/episodio/jujutsu-kaisen-2-episodio-4/" target="_blank" class="episode-link">▶ Assistir</a>
+                </div>
+                <div class="episode-card">
+                    <div class="episode-number">Episódio 5</div>
+                    <div class="episode-title">Força Bruta</div>
+                    <a href="https://animesonlinecc.to/episodio/jujutsu-kaisen-2-episodio-5/" target="_blank" class="episode-link">▶ Assistir</a>
+                </div>
+                <div class="episode-card">
+                    <div class="episode-number">Episódio 6</div>
+                    <div class="episode-title">Reunião de Antigos Amigos</div>
+                    <a href="https://animesonlinecc.to/episodio/jujutsu-kaisen-2-episodio-6/" target="_blank" class="episode-link">▶ Assistir</a>
+                </div>
+                <div class="episode-card">
+                    <div class="episode-number">Episódio 7</div>
+                    <div class="episode-title">Não-Cânone</div>
+                    <a href="https://animesonlinecc.to/episodio/jujutsu-kaisen-2-episodio-7/" target="_blank" class="episode-link">▶ Assistir</a>
+                </div>
+                <div class="episode-card">
+                    <div class="episode-number">Episódio 8</div>
+                    <div class="episode-title">Herói Invencível</div>
+                    <a href="https://animesonlinecc.to/episodio/jujutsu-kaisen-2-episodio-8/" target="_blank" class="episode-link">▶ Assistir</a>
+                </div>
+                <div class="episode-card">
+                    <div class="episode-number">Episódio 9</div>
+                    <div class="episode-title">Perdição da Tempestade</div>
+                    <a href="https://animesonlinecc.to/episodio/jujutsu-kaisen-2-episodio-9/" target="_blank" class="episode-link">▶ Assistir</a>
+                </div>
+                <div class="episode-card">
+                    <div class="episode-number">Episódio 10</div>
+                    <div class="episode-title">Escuridão</div>
+                    <a href="https://animesonlinecc.to/episodio/jujutsu-kaisen-2-episodio-10/" target="_blank" class="episode-link">▶ Assistir</a>
+                </div>
+                <div class="episode-card">
+                    <div class="episode-number">Episódio 11</div>
+                    <div class="episode-title">Passado de Yuji</div>
+                    <a href="https://animesonlinecc.to/episodio/jujutsu-kaisen-2-episodio-11/" target="_blank" class="episode-link">▶ Assistir</a>
+                </div>
+                <div class="episode-card">
+                    <div class="episode-number">Episódio 12</div>
+                    <div class="episode-title">Respeito</div>
+                    <a href="https://animesonlinecc.to/episodio/jujutsu-kaisen-2-episodio-12/" target="_blank" class="episode-link">▶ Assistir</a>
+                </div>
+                <div class="episode-card">
+                    <div class="episode-number">Episódio 13</div>
+                    <div class="episode-title">Aflição Sem Limites</div>
+                    <a href="https://animesonlinecc.to/episodio/jujutsu-kaisen-2-episodio-13/" target="_blank" class="episode-link">▶ Assistir</a>
+                </div>
+                <div class="episode-card">
+                    <div class="episode-number">Episódio 14</div>
+                    <div class="episode-title">Vencimento</div>
+                    <a href="https://animesonlinecc.to/episodio/jujutsu-kaisen-2-episodio-14/" target="_blank" class="episode-link">▶ Assistir</a>
+                </div>
+                <div class="episode-card">
+                    <div class="episode-number">Episódio 15</div>
+                    <div class="episode-title">Desejo Ardente</div>
+                    <a href="https://animesonlinecc.to/episodio/jujutsu-kaisen-2-episodio-15/" target="_blank" class="episode-link">▶ Assistir</a>
+                </div>
+                <div class="episode-card">
+                    <div class="episode-number">Episódio 16</div>
+                    <div class="episode-title">Poder Perfeito</div>
+                    <a href="https://animesonlinecc.to/episodio/jujutsu-kaisen-2-episodio-16/" target="_blank" class="episode-link">▶ Assistir</a>
+                </div>
+                <div class="episode-card">
+                    <div class="episode-number">Episódio 17</div>
+                    <div class="episode-title">Retirada</div>
+                    <a href="https://animesonlinecc.to/episodio/jujutsu-kaisen-2-episodio-17/" target="_blank" class="episode-link">▶ Assistir</a>
+                </div>
+                <div class="episode-card">
+                    <div class="episode-number">Episódio 18</div>
+                    <div class="episode-title">Aliança</div>
+                    <a href="https://animesonlinecc.to/episodio/jujutsu-kaisen-2-episodio-18/" target="_blank" class="episode-link">▶ Assistir</a>
+                </div>
+                <div class="episode-card">
+                    <div class="episode-number">Episódio 19</div>
+                    <div class="episode-title">Armadilha Dupla</div>
+                    <a href="https://animesonlinecc.to/episodio/jujutsu-kaisen-2-episodio-19/" target="_blank" class="episode-link">▶ Assistir</a>
+                </div>
+                <div class="episode-card">
+                    <div class="episode-number">Episódio 20</div>
+                    <div class="episode-title">Metamorfose</div>
+                    <a href="https://animesonlinecc.to/episodio/jujutsu-kaisen-2-episodio-20/" target="_blank" class="episode-link">▶ Assistir</a>
+                </div>
+                <div class="episode-card">
+                    <div class="episode-number">Episódio 21</div>
+                    <div class="episode-title">Intervenção de Gojo</div>
+                    <a href="https://animesonlinecc.to/episodio/jujutsu-kaisen-2-episodio-21/" target="_blank" class="episode-link">▶ Assistir</a>
+                </div>
+                <div class="episode-card">
+                    <div class="episode-number">Episódio 22</div>
+                    <div class="episode-title">Hora da Retribuição</div>
+                    <a href="https://animesonlinecc.to/episodio/jujutsu-kaisen-2-episodio-22/" target="_blank" class="episode-link">▶ Assistir</a>
+                </div>
+                <div class="episode-card">
+                    <div class="episode-number">Episódio 23</div>
+                    <div class="episode-title">Choque</div>
+                    <a href="https://animesonlinecc.to/episodio/jujutsu-kaisen-2-episodio-23/" target="_blank" class="episode-link">▶ Assistir</a>
+                </div>
+            </div>
+
+            <p style="margin-top: 3rem; text-align: center; color: #00d4ff;">Total de 23 episódios</p>
+        </div>
+    </div>
+</body>
+</html>
