@@ -21,8 +21,10 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            overflow: hidden;
+            overflow-x: hidden;
+            overflow-y: auto;
             position: relative;
+            padding: 1.5rem 1rem;
         }
 
         @keyframes gradientMove {
@@ -57,11 +59,12 @@
             z-index: 2;
             text-align: center;
             max-width: 1000px;
+            width: min(100%, 1000px);
             padding: 2rem;
         }
 
         h1 {
-            font-size: 5rem;
+            font-size: clamp(2rem, 8vw, 5rem);
             font-weight: 900;
             margin: 0 0 2rem 0;
             background: linear-gradient(135deg, #ff1493, #8b00ff, #ff1493);
@@ -86,7 +89,7 @@
         }
 
         .subtitle {
-            font-size: 1.5rem;
+            font-size: clamp(1rem, 3.5vw, 1.5rem);
             color: #ff1493;
             margin-bottom: 4rem;
             font-weight: 300;
@@ -273,16 +276,25 @@
 
         .description {
             margin: 3rem 0;
-            padding: 2rem;
+            padding: 1.5rem;
             background: rgba(0, 0, 0, 0.4);
             border: 2px solid rgba(255, 20, 147, 0.3);
             border-radius: 10px;
-            font-size: 1.1rem;
+            font-size: clamp(0.95rem, 2.8vw, 1.1rem);
             line-height: 1.8;
             color: #ccc;
         }
 
         @media (max-width: 768px) {
+            body {
+                align-items: flex-start;
+                padding: 1rem 0.75rem;
+            }
+
+            .container {
+                padding: 1.25rem;
+            }
+
             h1 {
                 font-size: 3rem;
             }
@@ -304,6 +316,10 @@
         }
 
         @media (max-width: 480px) {
+            body {
+                padding: 0.75rem 0.5rem;
+            }
+
             .container {
                 padding: 1rem;
             }
@@ -316,6 +332,12 @@
             .subtitle {
                 font-size: 1rem;
                 margin-bottom: 1.5rem;
+            }
+
+            .description {
+                margin: 1.5rem 0;
+                padding: 1rem;
+                line-height: 1.6;
             }
         }
     </style>
